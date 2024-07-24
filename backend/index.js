@@ -5,11 +5,11 @@ const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Stripe = require("stripe");
-const path = require('path')
+const path = require("path");
 
 const app = express();
-const _dirname = __dirname;
-const buildPath = path.join(_dirname, '../client/build');
+const _dirname = path.dirname("");
+const buildPath = path.join(_dirname, "../client/build");
 app.use(express.static(buildPath));
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
