@@ -4,12 +4,12 @@ import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setDataProduct } from "./redux/productSlice";
 
 function App() {
   const dispatch = useDispatch();
-  const productData = useSelector((state) => state.product);
+
 
   useEffect(() => {
     (async () => {
