@@ -2,6 +2,9 @@
 
 A full-stack restaurant management application built using the MERN (MongoDB, Express, React, Node.js) stack. This application uses Tailwind CSS for styling and integrates Stripe for payment processing.
 
+## Live
+https://new-resturant-app.vercel.app/
+
 ### Screenshots
 
 ## SignUp page
