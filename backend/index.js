@@ -13,7 +13,8 @@ const buildPath = path.join(_dirname, "../client/build");
 app.use(express.static(buildPath));
 app.use(cors(
   {
-    origin:'*'
+    origin:'*',
+    credentials:true
   }
 ));
 app.use(bodyParser.json({ limit: "50mb" }));
