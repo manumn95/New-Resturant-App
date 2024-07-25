@@ -55,19 +55,9 @@ const productSchema = mongoose.Schema({
 
 const ProductModel = mongoose.model("product", productSchema);
 
-app.get("/", (req, res) => {
-  res.sendFile(
-    path.join(_dirname,"../client/build/index.html"),
-    function(err)
-    {
-      if(err)
-      {
-        res.status(500).send(err)
-      }
-    }
-  )
- 
-});
+app.get('/',(req,res)=>{
+  res.send('server is running')
+})
 
 //signup API
 app.post("/signUp", async (req, res) => {
