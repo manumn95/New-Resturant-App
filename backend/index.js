@@ -5,12 +5,10 @@ const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Stripe = require("stripe");
-const path = require("path");
+
 
 const app = express();
-const _dirname = path.dirname("");
-const buildPath = path.join(_dirname, "../client/build");
-app.use(express.static(buildPath));
+
 app.use(cors(
   {
     origin:'http://localhost:3000',
