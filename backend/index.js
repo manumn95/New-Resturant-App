@@ -11,7 +11,11 @@ const app = express();
 const _dirname = path.dirname("");
 const buildPath = path.join(_dirname, "../client/build");
 app.use(express.static(buildPath));
-app.use(cors());
+app.use(cors(
+  {
+    origin:'*'
+  }
+));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
