@@ -6,15 +6,9 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Stripe = require("stripe");
 
-
 const app = express();
 
-app.use(cors(
-  {
-    origin:'http://localhost:3000',
-    credentials:true
-  }
-));
+app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
@@ -55,9 +49,9 @@ const productSchema = mongoose.Schema({
 
 const ProductModel = mongoose.model("product", productSchema);
 
-app.get('/',(req,res)=>{
-  res.send('server is running')
-})
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
 
 //signup API
 app.post("/signUp", async (req, res) => {
